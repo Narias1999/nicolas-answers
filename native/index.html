@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nicolás Responde</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="container">
+        <h1>Nicolás Responde</h1>
+        <div class="rules">
+            <h2>Instrucciones</h2>
+            <p>Para jugar debes hacer una petición que debe comenzar con: "Nicolás Dios omnipotente"</p>
+        </div>
+        <div class="game">
+            <div class="textField">
+                <span id="placeholder">Petición</span>
+                <input type="text" id="peticion">
+            </div>
+            <div class="textField">
+                <span id="placeholder">Pregunta</span>
+                <input type="text" id="Pregunta">
+            </div>
+            <a id="action">Responder</a>
+            <a id="action2">Nueva Pregunta</a>
+            <div class="response">
+                <div id="loader"></div>
+                <div id="response">
+                    <strong>Respuesta: </strong>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="magiaNegra.js"></script>
+</body>
+</html>
