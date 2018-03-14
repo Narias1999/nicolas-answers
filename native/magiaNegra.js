@@ -61,7 +61,7 @@ peticion.addEventListener('keypress', e => {
     }
 })
 peticion.addEventListener('keyup', e=> {
-    if(e.keyCode == 8) {
+    if(e.keyCode == 8 && count) {
         responseWanted = responseWanted.slice(0, -1)
         count--
     }
@@ -76,8 +76,10 @@ function showResponse() {
             loader.style.display = 'block'
             statusText.innerHTML = 'Haciendo conexión...'
             button2.disabled = true
+            setTimeout(()=> {
+                statusBar.className='active'
+            }, 10)               
             interval = setInterval(()=> {
-                statusBar.className='active'                
                 seconds += .1
                 if(seconds >= 4 && seconds <= 5) statusText.innerHTML = 'Contactando con espiritu...'
                 else if(seconds >= 7 && seconds <= 8) statusText.innerHTML = 'Obteniendo respuesta...'
